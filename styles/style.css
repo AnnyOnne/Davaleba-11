@@ -14,9 +14,13 @@ body {font-family: "roboto", sans-serif;}
 	background-color: blue;
 	margin:0  10px;}
 .main-header .container
-	{display: flex;
-	align-items: center;
-	justify-content: space-between;}
+	{display: -webkit-box;display: -ms-flexbox;display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;}
 .main-header .container nav li
 	{display: inline-block;
 	padding: 0 10px;}
@@ -31,11 +35,15 @@ body {font-family: "roboto", sans-serif;}
 	padding-top: 20px;
 	padding-bottom: 90px;}
 .news-container .article-container
-	{display: flex;
-	justify-content: space-between;
+	{display: -webkit-box;display: -ms-flexbox;display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-top:34px;
-	flex-wrap:wrap;
-	box-sizing:border-box;}
+	-ms-flex-wrap:wrap;
+	    flex-wrap:wrap;
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box;}
 .news-container .article-container .article-item .article-text
 	{width:100%;
 	font-size:22px;
@@ -43,7 +51,8 @@ body {font-family: "roboto", sans-serif;}
 	position: relative;
 	top:-5px;
 	background-color: #E6E6E6;
-	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box;
 	color: #333333;}
 .loadmore
 	{color: white;
@@ -57,7 +66,9 @@ body {font-family: "roboto", sans-serif;}
 	padding-top: 24px;
 	margin-left: 500px;
 	margin-top: 40px;
-	justify-content: center;}
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;}
 /**Videos | view all videos**/
 .video-container
 	{background-color: #363E97;}
@@ -77,14 +88,20 @@ body {font-family: "roboto", sans-serif;}
 .video-container .video-box.right-video{
 	position: absolute;
 	right: 0;
-	box-sizing: border-box;
-	flex-wrap:wrap;}
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-ms-flex-wrap:wrap;
+	    flex-wrap:wrap;}
 .video-box.right-video .yt-video
 	{ display: inline-block;
 	font-size: 16.85pt;
 	color: #000000;
-	justify-content:center;
-	align-items: center;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-bottom: 145px;
@@ -94,8 +111,12 @@ body {font-family: "roboto", sans-serif;}
 	{display: inline-block;
 	font-size: 16.85pt;
 	color: #000000;
-	justify-content:center;
-	align-items: flex-end;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-bottom: 145px;
@@ -106,7 +127,9 @@ body {font-family: "roboto", sans-serif;}
 	position: relative;
 	margin-left: 610px;
 	padding-bottom: 30px;
-	justify-content: center;}
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;}
 /*Featured | view all featured media*/
 .featured-container
 	{background-color: #E6E6E6;
@@ -118,7 +141,6 @@ body {font-family: "roboto", sans-serif;}
 .featured-media h6
 	{color: #3D58A6;
 	font-size: 22pt;
-	letter-spacing: 25;
 	margin: 0px 0 15px 50px;
 	padding-top: 15px;}
 .featured-media img
@@ -148,10 +170,6 @@ body {font-family: "roboto", sans-serif;}
 .last-media
 	{margin: 0 100px;
 	margin-top: 90px;}
-.readmore
-	{color: #3D58A6;
-	font-size: 7pt;
-	float: right;}
 /**footer**/
 .main-footer
 	{padding-top: 25px;
@@ -164,7 +182,9 @@ body {font-family: "roboto", sans-serif;}
 	float: left;}
 .created
 	{ font-size: 12pt;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 	font-family: "Myriad Pro", sans-serif;
 	float: right;}
 @media (max-width: 1024px) 
@@ -173,20 +193,20 @@ body {font-family: "roboto", sans-serif;}
 	.main-header .burger
 	{display: block;}
 	.main-header .container .social-icon
-	{justify-content: flex-end;}
+	{-webkit-box-pack: end;-ms-flex-pack: end;justify-content: flex-end;}
 	.video-container
 	{display: none;}
 	.news-header
 	{overflow: hidden;}
 	.news-container .article-container
-	{flex-wrap:nowrap;}
+	{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}
 	.article-item
 	{width: 33%;
 	margin: 0 5px;}}
 
 @media (max-width: 910px) 
 	{.news-container .article-container
-	{flex-wrap:nowrap;}
+	{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}
 	.article-item
 	{width: 100%;
 	margin: 0 5px;}
@@ -194,8 +214,11 @@ body {font-family: "roboto", sans-serif;}
 	{width: 100%;}
 	.featured-media
 	{overflow: hidden;
-	justify-content: flex-end;
-	flex-wrap:nowrap; 
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-ms-flex-wrap:nowrap;
+	    flex-wrap:nowrap; 
 	width: 33%;
 	margin: 0 5px;}}
 @media (max-width: 480px) 
